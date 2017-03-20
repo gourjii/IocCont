@@ -12,9 +12,11 @@ import org.springframework.stereotype.Component;
 public class IocContApp {
 	
     public static void main(String[] args) {
-      
+    	System.out.println("Step 0");
     	ApplicationContext context = new AnnotationConfigApplicationContext(Container.class);
+    	System.out.println("Step 1");
     	BeanT beanT1 = context.getBean(BeanT.class);
+    	System.out.println("Step 2");
     	BeanT beanT2 = context.getBean(BeanT.class);
     	System.out.println("Just before getting BeanComp");
     	BeanComp beanC1 = context.getBean(BeanComp.class);
